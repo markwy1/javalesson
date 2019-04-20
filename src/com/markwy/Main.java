@@ -1,48 +1,23 @@
 package com.markwy;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Scanner;
-
+/*
+    类、方法的4种访问权限
+ */
 public class Main {
+    private void fun() {
+        Test t = new Test();
+        System.out.println("同一个包中的类访问： ");
+        //System.out.println("private_mem" + t.private_mem);
+        System.out.println("protected_mem" + t.protected_mem);
+        System.out.println("public_mem" + t.public_mem);
+        System.out.println("default_friend_mem" + t.default_friend_mem);
 
+    }
     public static void main(String[] args) {
 	// write your code here
-        int x = 0;
-
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        //Scanner s = new Scanner(System.in);
-        System.out.println("InputStream created.");
-        while ( x != 99 ) {
-            try {
-                System.out.print("Input a number: ");
-                String str = br.readLine();
-                //String str = s.next();
-                x = Integer.parseInt(str);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            switch (x) {
-                case 10:
-                case 20:
-                    System.out.println("input is: " + x);
-                    break;
-                case 30:
-                case 40:
-                    System.out.println("input is: " + x);
-                    break;
-                default:
-                    System.out.println("Default is assigned");
-            }
-        }
-        try {
-            br.close();
-            System.out.println("InputStream closed.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Test t = new Test();
+        t.fun();
+        Main m = new Main();
+        m.fun();
     }
 }
