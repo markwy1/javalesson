@@ -1,5 +1,7 @@
 package com.markwy;
 
+import com.markwy.hp.SubTest;
+
 /*
     类、方法的4种访问权限
  */
@@ -19,5 +21,7 @@ public class Main {
         t.fun();
         Main m = new Main();
         m.fun();
+        SubTest st = new SubTest();
+        st.fun();
     }
 }

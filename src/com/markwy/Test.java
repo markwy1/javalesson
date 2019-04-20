@@ -1,6 +1,6 @@
 package com.markwy;
 
-class Test {
+public class Test {
     /* 把类当成一个人，来理解操作权限
        私有的，锁在自己的抽屉里，只有本人能看到，如私房钱。子女也看不到。
        保护的，放在自己家里的，家庭成员如子女可以看，即便在外地（其他包）的也可以，子类如血缘关系，构成家庭圈子。
@@ -12,7 +12,7 @@ class Test {
     protected String protected_mem;
     public  String public_mem;
     String default_friend_mem;  // 默认是类间是朋友关系
-    Test() {
+    public Test() {
         private_mem = ":是私有成员，私人可用的，类本身";
         protected_mem = ":是保护成员，家庭可用的，子类";
         public_mem = ":是公有成员，公共可用的";
